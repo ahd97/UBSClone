@@ -1,0 +1,25 @@
+.collapsible-width{
+    width: 280px;
+}
+
+.mat-accordion{
+    background-color: white;
+}
+
+.msg-avatar{
+    display: block;
+    /* vertical-align: middle; */
+    width: 35px;
+    height: 35px;
+	border-radius: 50%;
+	padding: 25px 20px;
+}
+
+.search{
+    cursor: pointer;
+}
+
+.paddingup{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}

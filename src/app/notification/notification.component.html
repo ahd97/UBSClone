@@ -1,0 +1,36 @@
+<div class="paddingup app-flex">
+    <mat-icon class="pad"><i class="fa fa-bell-o"></i></mat-icon>
+    <h2 class="pad gap">Mentions</h2>
+    <div class="pad-left">
+        <button mat-icon-button [matMenuTriggerFor]="filter" matTooltip="Filter">
+            <mat-icon><i class="fa fa-filter"></i></mat-icon>
+        </button>
+        <mat-menu #filter="matMenu">
+            <button mat-menu-item>
+                <span>All</span>
+            </button>
+            <button mat-menu-item>
+                <span>Public Channel</span>
+            </button>
+            <button mat-menu-item>
+                <span>Private Channel</span>
+            </button>
+            <button mat-menu-item>
+                <span>Personal</span>
+            </button>
+        </mat-menu>
+    </div>
+    <div>
+        <button mat-icon-button [matMenuTriggerFor]="sort" matTooltip="Sort List">
+            <mat-icon><i class="fa fa-sort-amount-desc"></i></mat-icon>
+        </button>
+        <mat-menu #sort="matMenu">
+            <button mat-menu-item>
+                <span>Ascending</span>
+            </button>
+            <button mat-menu-item>
+                <span>Descending</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>

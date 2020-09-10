@@ -1,0 +1,17 @@
+<div class="paddingup">
+    <mat-icon class="far fa-address-book"></mat-icon>
+    <mat-form-field>
+        <input matInput placeholder="Search Contact">
+    </mat-form-field>
+    <button mat-icon-button [matMenuTriggerFor]="sort" mat-tooltip="Sort List">
+        <mat-icon class="fa fa-sort-amount-asc"></mat-icon>
+    </button>
+    <mat-menu #sort="matMenu">
+        <button mat-menu-item>
+            <span>Ascending</span>
+          </button>
+          <button mat-menu-item>
+            <span>Descending</span>
+          </button>
+    </mat-menu>
+</div>

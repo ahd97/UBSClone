@@ -1,0 +1,81 @@
+<div class="paddingup">
+    <mat-icon class="search">search</mat-icon>
+    <mat-form-field>
+        <input matInput placeholder="Search...">
+    </mat-form-field>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu1" matTooltip="Add Channel">
+        <mat-icon>add</mat-icon>
+    </button>
+    <mat-menu #menu1="matMenu">
+    <button mat-menu-item>
+        <mat-icon>add</mat-icon>
+        <span>Create Channel</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>chat</mat-icon>
+        <span>Browse Channel</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>group</mat-icon>
+        <span>Invite Member</span>
+    </button>
+    </mat-menu>
+    <button mat-icon-button [matMenuTriggerFor]="menu2" matTooltip="Display Mode">
+        <mat-icon class="search">more_vert</mat-icon>
+    </button>
+    <mat-menu #menu2="matMenu">
+        <button mat-menu-item>
+          <span>Comfortable</span>
+        </button>
+        <button mat-menu-item>
+          <span>Cozy</span>
+        </button>
+        <button mat-menu-item>
+          <span>Classic</span>
+        </button>
+    </mat-menu>
+</div>
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Favorites
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item>
+                <img src="../../assets/img_avatar.png" class="msg-avatar" alt="img"> 
+                <span>Aayush Desai</span>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<mat-accordion>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+              Messages
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item>
+                <img src="../../assets/img_avatar.png" class="msg-avatar" alt="img"> 
+                <span>Aalap Desai</span>
+            </mat-list-item>
+        </mat-list>
+        <mat-list>
+            <mat-list-item>
+                <img src="../../assets/img_avatar.png" class="msg-avatar" alt="img"> 
+                <span>Vishal Dolera</span>
+            </mat-list-item>
+        </mat-list>
+        <mat-list>
+            <mat-list-item>
+                <img src="../../assets/img_avatar.png" class="msg-avatar" alt="img"> 
+                <span>Ravish Bhatt</span>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</mat-accordion>

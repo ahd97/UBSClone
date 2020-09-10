@@ -1,0 +1,101 @@
+<div class="sidenav">
+    <div class="icon-btn-group">
+        <button mat-icon-button  matTooltip="Chats" (click)="msgComponent()">
+            <mat-icon class="far fa-comment-dots"></mat-icon>
+            <!-- <i class="far fa-comment-dots"></i> -->
+        </button>
+        <button mat-icon-button matTooltip="Contacts" (click)="contactComponent()">
+            <mat-icon class="far fa-address-book"></mat-icon>
+            <!-- <i class="far fa-address-book"></i> -->
+        </button>
+        <button mat-icon-button matTooltip="Notification" (click)="notificationComponent()">
+            <mat-icon class="fas fa-bell"></mat-icon>
+            <!-- <i class="fas fa-bell"></i> -->
+        </button>
+        <button mat-icon-button matTooltip="Starred Message" (click)="starredMsgComponent()">
+            <mat-icon class="far fa-star"></mat-icon>
+            <!-- <i class="far fa-star"></i> -->
+        </button>
+        <button mat-icon-button matTooltip="Files" (click)="fileCmpt()">
+            <mat-icon class="fas fa-layer-group"></mat-icon>
+            <!-- <i class="fas fa-layer-group"></i> -->
+        </button>
+        <button mat-icon-button matTooltip="Support">
+            <mat-icon class="fas fa-question-circle"></mat-icon>
+            <!-- <i class="fas fa-question-circle"></i> -->
+        </button>
+    </div>
+    
+    <div>
+        <app-message *ngIf="message"></app-message>
+        <app-contact *ngIf="contact"></app-contact>
+        <app-notification *ngIf="notification"></app-notification>
+        <app-starred-msg *ngIf="starredMsg"></app-starred-msg>
+        <app-files *ngIf="filecomponent"></app-files>
+    </div>
+
+    <div class="option-profile">
+        <div class="app-flex">
+            <div><img src="../../assets/img_avatar.png" alt="UR" class="avtar"></div>
+            <div class="usr-disc">
+                <p>Aayush Desai</p>
+                <p>Online</p>
+            </div>
+            <div class="btn-padding lft-padding">
+                <button mat-icon-button [matMenuTriggerFor]="muteOption" matTooltip="Mute">
+                    <i class="fas fa-bell"></i>
+                </button>
+                <mat-menu #muteOption="matMenu">
+                    <button mat-menu-item disabled>
+                        <span>Do not disturb for</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>30 Minutes</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>1 Hour</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>2 Hours</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Tomorrow</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Custom</span>
+                    </button>
+                </mat-menu>
+            </div>
+            <div class="btn-padding">
+                <button mat-icon-button matTooltip="More Options" [matMenuTriggerFor]="options">
+                    <i class="fa fa-ellipsis-v"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                    <i class="fa fa-ellipsis-v"></i>
+                </button>
+                <mat-menu #options="matMenu">
+                    <button mat-menu-item>
+                        <i class="fas fa-user-plus"></i>
+                        <span>Recruiment</span>
+                    </button>
+                    <button mat-menu-item>
+                        <i class="far fa-user"></i>
+                        <span>People</span>
+                    </button>
+                    <button mat-menu-item>
+                        <i class="fas fa-puzzle-piece"></i>
+                        <span>Integration</span>
+                    </button>
+                    <button mat-menu-item>
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </button>
+                    <button mat-menu-item>
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+    </div>
+</div>
+

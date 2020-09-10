@@ -1,0 +1,20 @@
+.gap{
+    padding-left: 3px;
+}
+
+.paddingup{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.pad-left{
+	padding-left: 70px;
+}
+
+.app-flex{
+	display: flex;
+}
+
+.pad{
+	padding-top: 3px;
+}
